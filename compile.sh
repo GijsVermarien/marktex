@@ -14,3 +14,4 @@ for markdownfile in $markdownfiles; do
 	fi
 done
 echo "done"
+exit 0
