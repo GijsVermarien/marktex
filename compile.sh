@@ -7,7 +7,7 @@ for markdownfile in $markdownfiles; do
 	latextarget="$(echo $markdownfile | sed -e 's/.md/.tex/')"
 	if [ $latextarget -ot $markdownfile ]; then
 		latextarget="$(echo $markdownfile | sed -e 's/.md/.tex/')"
-		pandoc -f markdown -t latex $markdownfile >>$latextarget
+		pandoc -f markdown -t latex $markdownfile >$latextarget
 	echo "converted" $markdownfile "to" $latextarget
 	else
 		echo $markdownfile did not need converting as $latextarget is newer
